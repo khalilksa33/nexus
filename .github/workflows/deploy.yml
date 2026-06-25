@@ -26,10 +26,10 @@ jobs:
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           
-          # Configure SSH to use cloudflared as a ProxyCommand for the host
+          # Configure SSH to use cloudflared as a ProxyCommand for the host, passing Access Service Tokens
           cat <<EOF > ~/.ssh/config
           Host ssh-erp.26i.uk
-              ProxyCommand /usr/local/bin/cloudflared access ssh --hostname %h
+              ProxyCommand /usr/local/bin/cloudflared access ssh --hostname %h --id ${{ secrets.CF_CLIENT_ID }} --secret ${{ secrets.CF_CLIENT_SECRET }}
               StrictHostKeyChecking no
               UserKnownHostsFile /dev/null
               IdentityFile ~/.ssh/id_rsa
