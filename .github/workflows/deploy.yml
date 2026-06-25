@@ -1,0 +1,38 @@
+name: Auto Deployment to Host
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy Custom Addons
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Copy Addons to Server via SCP
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT || 22 }}
+          source: "debrand_retail_marketplace/,disable_odoo_online/,portal_odoo_debranding/,remove_odoo_enterprise/"
+          target: ${{ secrets.DEPLOY_PATH }}
+
+      - name: Restart Odoo Service and Update Modules
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT || 22 }}
+          script: |
+            # Restart Odoo to pick up the new/updated addons
+            sudo systemctl restart odoo
+            # Optional: Trigger Odoo to update database modules if configured
+            # odoo -c /etc/odoo.conf -d your_db -u debrand_retail_marketplace --stop-after-init
