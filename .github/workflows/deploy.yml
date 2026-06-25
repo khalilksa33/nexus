@@ -42,5 +42,5 @@ jobs:
 
       - name: Restart Odoo Service and Update Modules
         run: |
-          # SSH into the server through the tunnel to restart Odoo
-          ssh ${{ secrets.SSH_USERNAME }}@ssh-erp.26i.uk "sudo systemctl restart odoo"
+          # SSH into the server through the tunnel to restart Odoo (nexus service)
+          ssh ${{ secrets.SSH_USERNAME }}@ssh-erp.26i.uk "sudo systemctl restart nexus"
