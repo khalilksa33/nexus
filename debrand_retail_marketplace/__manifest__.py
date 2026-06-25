@@ -13,11 +13,13 @@
         "point_of_sale",
         "website_sale",
         "base_setup",
+        "l10n_sa",
     ],
     "data": [
         "views/debranding_views.xml",
         "data/selling_outlets_data.xml",
         "data/vendor_portal_data.xml",
+        "data/localization_data.xml",
     ],
     "installable": True,
     "application": True,

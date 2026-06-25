@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data noupdate="1">
+        <!-- Enable SAR Currency -->
+        <record id="base.SAR" model="res.currency">
+            <field name="active" eval="True" />
+        </record>
+
+        <!-- Set Main Company Currency to SAR -->
+        <record id="base.main_company" model="res.company">
+            <field name="currency_id" ref="base.SAR" />
+        </record>
+
+        <!-- Activate Arabic (ar_001) as first language -->
+        <record id="base.lang_ar" model="res.lang">
+            <field name="active" eval="True" />
+        </record>
+
+        <!-- Ensure English is also active as second language -->
+        <record id="base.lang_en" model="res.lang">
+            <field name="active" eval="True" />
+        </record>
+    </data>
+</odoo>
