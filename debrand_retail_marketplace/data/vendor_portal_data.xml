@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data noupdate="1">
+        <!-- 10 Vendor Partners -->
+        <record id="partner_vendor_1" model="res.partner">
+            <field name="name">Vendor 1 - Apex Global</field>
+            <field name="email">vendor1@apexglobal.example.com</field>
+            <field name="supplier_rank">1</field>
+        </record>
+        <record id="partner_vendor_2" model="res.partner">
+            <field name="name">Vendor 2 - Beacon Enterprises</field>
+            <field name="email">vendor2@beacon.example.com</field>
+            <field name="supplier_rank">1</field>
+        </record>
+        <record id="partner_vendor_3" model="res.partner">
+            <field name="name">Vendor 3 - Catalyst Goods</field>
+            <field name="email">vendor3@catalyst.example.com</field>
+            <field name="supplier_rank">1</field>
+        </record>
+        <record id="partner_vendor_4" model="res.partner">
+            <field name="name">Vendor 4 - Delta Distributors</field>
+            <field name="email">vendor4@delta.example.com</field>
+            <field name="supplier_rank">1</field>
+        </record>
+        <record id="partner_vendor_5" model="res.partner">
+            <field name="name">Vendor 5 - Echo Logistics</field>
+            <field name="email">vendor5@echo.example.com</field>
+            <field name="supplier_rank">1</field>
+        </record>
+        <record id="partner_vendor_6" model="res.partner">
+            <field name="name">Vendor 6 - Falcon Products</field>
+            <field name="email">vendor6@falcon.example.com</field>
+            <field name="supplier_rank">1</field>
+        </record>
+        <record id="partner_vendor_7" model="res.partner">
+            <field name="name">Vendor 7 - Genesis Supply</field>
+            <field name="email">vendor7@genesis.example.com</field>
+            <field name="supplier_rank">1</field>
+        </record>
+        <record id="partner_vendor_8" model="res.partner">
+            <field name="name">Vendor 8 - Horizon Trading</field>
+            <field name="email">vendor8@horizon.example.com</field>
+            <field name="supplier_rank">1</field>
+        </record>
+        <record id="partner_vendor_9" model="res.partner">
+            <field name="name">Vendor 9 - Infinity Retail</field>
+            <field name="email">vendor9@infinity.example.com</field>
+            <field name="supplier_rank">1</field>
+        </record>
+        <record id="partner_vendor_10" model="res.partner">
+            <field name="name">Vendor 10 - Zenith Merchants</field>
+            <field name="email">vendor10@zenith.example.com</field>
+            <field name="supplier_rank">1</field>
+        </record>
+
+        <!-- 10 Portal Users for Vendors -->
+        <record id="user_vendor_1" model="res.users">
+            <field name="name">Vendor 1 Portal User</field>
+            <field name="login">vendor1@apexglobal.example.com</field>
+            <field name="partner_id" ref="partner_vendor_1" />
+            <field name="groups_id" eval="[(4, ref('base.group_portal'))]" />
+        </record>
+        <record id="user_vendor_2" model="res.users">
+            <field name="name">Vendor 2 Portal User</field>
+            <field name="login">vendor2@beacon.example.com</field>
+            <field name="partner_id" ref="partner_vendor_2" />
+            <field name="groups_id" eval="[(4, ref('base.group_portal'))]" />
+        </record>
+        <record id="user_vendor_3" model="res.users">
+            <field name="name">Vendor 3 Portal User</field>
+            <field name="login">vendor3@catalyst.example.com</field>
+            <field name="partner_id" ref="partner_vendor_3" />
+            <field name="groups_id" eval="[(4, ref('base.group_portal'))]" />
+        </record>
+        <record id="user_vendor_4" model="res.users">
+            <field name="name">Vendor 4 Portal User</field>
+            <field name="login">vendor4@delta.example.com</field>
+            <field name="partner_id" ref="partner_vendor_4" />
+            <field name="groups_id" eval="[(4, ref('base.group_portal'))]" />
+        </record>
+        <record id="user_vendor_5" model="res.users">
+            <field name="name">Vendor 5 Portal User</field>
+            <field name="login">vendor5@echo.example.com</field>
+            <field name="partner_id" ref="partner_vendor_5" />
+            <field name="groups_id" eval="[(4, ref('base.group_portal'))]" />
+        </record>
+        <record id="user_vendor_6" model="res.users">
+            <field name="name">Vendor 6 Portal User</field>
+            <field name="login">vendor6@falcon.example.com</field>
+            <field name="partner_id" ref="partner_vendor_6" />
+            <field name="groups_id" eval="[(4, ref('base.group_portal'))]" />
+        </record>
+        <record id="user_vendor_7" model="res.users">
+            <field name="name">Vendor 7 Portal User</field>
+            <field name="login">vendor7@genesis.example.com</field>
+            <field name="partner_id" ref="partner_vendor_7" />
+            <field name="groups_id" eval="[(4, ref('base.group_portal'))]" />
+        </record>
+        <record id="user_vendor_8" model="res.users">
+            <field name="name">Vendor 8 Portal User</field>
+            <field name="login">vendor8@horizon.example.com</field>
+            <field name="partner_id" ref="partner_vendor_8" />
+            <field name="groups_id" eval="[(4, ref('base.group_portal'))]" />
+        </record>
+        <record id="user_vendor_9" model="res.users">
+            <field name="name">Vendor 9 Portal User</field>
+            <field name="login">vendor9@infinity.example.com</field>
+            <field name="partner_id" ref="partner_vendor_9" />
+            <field name="groups_id" eval="[(4, ref('base.group_portal'))]" />
+        </record>
+        <record id="user_vendor_10" model="res.users">
+            <field name="name">Vendor 10 Portal User</field>
+            <field name="login">vendor10@zenith.example.com</field>
+            <field name="partner_id" ref="partner_vendor_10" />
+            <field name="groups_id" eval="[(4, ref('base.group_portal'))]" />
+        </record>
+    </data>
+</odoo>

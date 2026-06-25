@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data noupdate="1">
+        <!-- 10 Point of Sale configurations (selling outlets) -->
+        <record id="pos_outlet_1" model="pos.config">
+            <field name="name">Outlet 1 - Downtown Hub</field>
+        </record>
+        <record id="pos_outlet_2" model="pos.config">
+            <field name="name">Outlet 2 - Northside Plaza</field>
+        </record>
+        <record id="pos_outlet_3" model="pos.config">
+            <field name="name">Outlet 3 - Southside Galleria</field>
+        </record>
+        <record id="pos_outlet_4" model="pos.config">
+            <field name="name">Outlet 4 - East End Store</field>
+        </record>
+        <record id="pos_outlet_5" model="pos.config">
+            <field name="name">Outlet 5 - Westside Market</field>
+        </record>
+        <record id="pos_outlet_6" model="pos.config">
+            <field name="name">Outlet 6 - Central Square</field>
+        </record>
+        <record id="pos_outlet_7" model="pos.config">
+            <field name="name">Outlet 7 - Metro Station</field>
+        </record>
+        <record id="pos_outlet_8" model="pos.config">
+            <field name="name">Outlet 8 - Airport Terminal</field>
+        </record>
+        <record id="pos_outlet_9" model="pos.config">
+            <field name="name">Outlet 9 - Harbor Point</field>
+        </record>
+        <record id="pos_outlet_10" model="pos.config">
+            <field name="name">Outlet 10 - Tech Park</field>
+        </record>
+    </data>
+</odoo>
